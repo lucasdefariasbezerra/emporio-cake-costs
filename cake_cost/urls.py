@@ -19,9 +19,11 @@ from django.urls import path
 from rest_framework import routers
 
 from ingredients.api.viewsets import IngredientViewSet
+from items.api.viewsets import ItemViewSet
 router = routers.DefaultRouter()
 
 router.register(r'ingredients', IngredientViewSet)
+router.register(r'items', ItemViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
