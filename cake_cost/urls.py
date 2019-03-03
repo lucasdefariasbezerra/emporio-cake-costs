@@ -20,10 +20,12 @@ from rest_framework import routers
 
 from ingredients.api.viewsets import IngredientViewSet
 from items.api.viewsets import ItemViewSet
+from cake.api.viewsets import CakeViewSet
 router = routers.DefaultRouter()
 
 router.register(r'ingredients', IngredientViewSet)
 router.register(r'items', ItemViewSet)
+router.register(r'cake', CakeViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
