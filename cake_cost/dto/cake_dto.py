@@ -6,9 +6,10 @@ class CakeDTO:
     description = ''
     items = []
 
-    def __init__(self, name=None, description=None):
+    def __init__(self, name=None, description=None, items=[]):
         self.name = name
         self.description = description
+        self.items = items
 
     def add_items(self, items_request):
         for it in items_request:

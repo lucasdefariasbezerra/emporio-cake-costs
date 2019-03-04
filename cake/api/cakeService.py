@@ -36,3 +36,14 @@ class CakeService:
             return 1
         except:
             return 0
+
+    def add_cake_items(self, cake_dto, cake_id):
+        try:
+            self.cake_model = Cake.objects.get(id=cake_id)
+            for item in cake_dto.items:
+                ingredient = Ingredient.objects.get(id=item.ingredient_id)
+                self.item_model = Item.objects.create(amount=item.amount, ingredient=ingredient)
+                self.cake_model.items.add(self.item_model)
+            return 1
+        except:
+            return 0
