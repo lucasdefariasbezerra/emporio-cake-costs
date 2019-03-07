@@ -47,3 +47,15 @@ class CakeService:
             return 1
         except:
             return 0
+
+    def check_fields(self, request):
+        try:
+            request['name']
+        except KeyError:
+            request['name'] = None
+
+        try:
+            request['description']
+        except KeyError:
+            request['description'] = None
+        return request

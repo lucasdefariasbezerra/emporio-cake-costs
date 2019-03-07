@@ -22,8 +22,9 @@ class CakeViewSet(ModelViewSet):
             return Response({'body': 'error on creating cake'}, status=400)
 
     def partial_update(self, request, *args, **kwargs):
-        if request.data['name'] or request.data['description']:
-            service = CakeService()
+        service = CakeService()
+        body = service.check_fields(request.data)
+        if body['name'] or body['description']:
             cake_dto = CakeDTO(request.data['name'], request.data['description'])
             cake_id = kwargs['pk']
             response = service.update_cake(cake_dto, cake_id)
