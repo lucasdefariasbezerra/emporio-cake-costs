@@ -1,0 +1,5 @@
+[run]
+omit =
+    ingredients/tests/*.py
+    ingredients/migrations/*
+    virtual_environment/*

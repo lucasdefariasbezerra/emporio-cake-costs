@@ -23,7 +23,7 @@ from items.api.viewsets import ItemViewSet
 from cake.api.viewsets import CakeViewSet
 router = routers.DefaultRouter()
 
-router.register(r'ingredients', IngredientViewSet)
+router.register(r'ingredients', IngredientViewSet, base_name='ingredients')
 router.register(r'items', ItemViewSet)
 router.register(r'cake', CakeViewSet)
 

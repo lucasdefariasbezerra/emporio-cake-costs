@@ -2,3 +2,5 @@ virtual_environment
 *.sqlite3
 .idea
 *.pyc
+htmlcov
+.coverage
