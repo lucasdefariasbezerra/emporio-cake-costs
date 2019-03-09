@@ -1,5 +1,20 @@
 [run]
 omit =
-    ingredients/tests/*.py
     ingredients/migrations/*
+    ingredients/__init__.py
+    ingredients/api/__init__.py
+    ingredients/admin.py
+    items/migrations/*
+    items/admin.py
+    items/__init__.py
+    items/api/__init__.py
+    cake/migrations/*
+    cake/__init__.py
+    cake/api/__init__.py
     virtual_environment/*
+    manage.py
+    tests_suite/*
+    cake_cost/__init__.py
+    cake_cost/dto/__init__.py
+    cake_cost/settings.py
+    cake_cost/urls.py

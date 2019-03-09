@@ -1,7 +1,5 @@
-from django.urls import include, path, reverse
-from django.utils.dateformat import format
+from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APITestCase
 from django.test import TestCase
 from ingredients.models import Ingredient
 
@@ -23,5 +21,3 @@ class IngredientViewTest(TestCase):
         actual_name = response.data['name']
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(actual_name, 'leite condensado')
-
-

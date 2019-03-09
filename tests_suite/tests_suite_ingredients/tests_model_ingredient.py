@@ -27,5 +27,3 @@ class IngredientTestCases(TestCase):
         ingredient.desc = 'update desc'
         ingredient.save()
         self.assertEqual(ingredient.desc, 'update desc')
-
-
